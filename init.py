@@ -1,7 +1,7 @@
 from cassandra.cluster import Cluster
 clstr=Cluster()
 session=clstr.connect()
-session.execute("drop keyspace mykeyspace;")
+session.execute("drop keyspace if exists mykeyspace;")
 session.execute("create keyspace mykeyspace with replication={'class': 'SimpleStrategy', 'replication_factor' : 2};")
 
 session=clstr.connect('mykeyspace')
