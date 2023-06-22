@@ -168,6 +168,7 @@ def update_reservation(session):
 while True:
     print("What would you like to do?")
     print("Choose by putting a number and confirm it with ENTER")
+    print("0: close")
     print("1: show all movies")
     print("2: show all reservations")
     print("3: make reservation")
@@ -194,3 +195,5 @@ while True:
         stress_test_four(session)
     elif action == "9":
         large_data(session)
+    elifaction == "0":
+        break
